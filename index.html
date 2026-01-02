@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>トイタテ！</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>トイタテ！</h1>
+            <p class="subtitle">問いの「鋭さ」を、その場でチェック</p>
+        </header>
+
+        <div class="gacha-section">
+            <p class="section-label">お題を決める</p>
+            <div class="gacha-buttons">
+                <button id="btnA" class="gacha-btn btn-a">パターンA<br><span class="btn-sub">モノ</span></button>
+                <button id="btnB" class="gacha-btn btn-b">パターンB<br><span class="btn-sub">困りごと</span></button>
+                <button id="btnC" class="gacha-btn btn-c">パターンC<br><span class="btn-sub">モノ×モノ</span></button>
+            </div>
+            
+            <div id="topicDisplay" class="topic-display hidden">
+                <span class="topic-label">今回のお題</span>
+                <div id="topicText" class="topic-text">ここにテーマが出ます</div>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <div class="hint-buttons">
+            <div class="hint-btn">何<span class="desc">(定義)</span></div>
+            <div class="hint-btn">なぜ<span class="desc">(原因)</span></div>
+            <div class="hint-btn">どのように<span class="desc">(仕組)</span></div>
+            <div class="hint-btn">違い<span class="desc">(比較)</span></div>
+        </div>
+
+        <main class="main-content">
+            <textarea id="questionInput" placeholder="お題に対する「問い」を入力してください。&#13;&#10;例：なぜ～は〇〇なのか？"></textarea>
+            
+            <button id="checkBtn" class="check-btn">判定する</button>
+            
+            <div id="loading" class="loading-spinner hidden"></div>
+
+            <div id="resultArea" class="result-card hidden">
+                <div class="result-header">
+                    <span id="resultIcon" class="status-icon"></span>
+                    <h2 id="resultTitle" class="status-title"></h2>
+                </div>
+                <div id="resultDetail" class="status-detail"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
